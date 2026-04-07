@@ -2382,7 +2382,7 @@ scope Toggles {
     // Miscellaneous Toggles
     head_remix_settings:
     entry_skip_results_screen:;         entry("Skip Results Screen", Menu.type.INT, 0, 0, 1, 0, 0, 2, OS.NULL, string_table_skip_results, OS.NULL, entry_hold_to_pause)
-    entry_hold_to_pause:;               entry_bool("Hold To Pause", OS.FALSE, OS.TRUE, OS.TRUE, OS.FALSE, entry_css_panel_menu)
+    entry_hold_to_pause:;               entry_bool("Hold To Pause", OS.TRUE, OS.TRUE, OS.TRUE, OS.FALSE, entry_css_panel_menu)
     entry_css_panel_menu:;              entry_bool("CSS Panel Menu", OS.TRUE, OS.FALSE, OS.TRUE, OS.TRUE, entry_practice_overlay)
     entry_practice_overlay:;            entry_bool("Color Overlays", OS.FALSE, OS.FALSE, OS.FALSE, OS.FALSE, entry_cinematic_entry)
     entry_cinematic_entry:;             entry("Cinematic Entry", Menu.type.INT, 0, 0, 0, 0, 0, 2, OS.NULL, string_table_frequency, OS.NULL, entry_flash_on_z_cancel)
@@ -2391,10 +2391,10 @@ scope Toggles {
     entry_model_display:;               entry("Model Display", Menu.type.INT, 0, 0, 1, 0, 0, 2, OS.NULL, string_table_poly, OS.NULL, entry_special_model)
     entry_special_model:;               entry("Special Model Display", Menu.type.INT, OS.FALSE, OS.FALSE, OS.FALSE, OS.FALSE, 0, 3, OS.NULL, string_table_model, OS.NULL, entry_advanced_hurtbox)
     entry_advanced_hurtbox:;            entry_bool("Advanced Hurtbox Display", OS.FALSE, OS.FALSE, OS.FALSE, OS.FALSE, entry_hold_to_exit_training)
-    entry_hold_to_exit_training:;       entry_bool("Hold To Exit Training", OS.FALSE, OS.TRUE, OS.FALSE, OS.FALSE, entry_improved_combo_meter)
-    entry_improved_combo_meter:;        entry_bool("Improved Combo Meter", OS.TRUE, OS.FALSE, OS.TRUE, OS.TRUE, entry_tech_chase_combo_meter)
-    entry_tech_chase_combo_meter:;      entry_bool("Tech Chase Combo Meter", OS.TRUE, OS.FALSE, OS.TRUE, OS.TRUE, entry_combo_meter)
-    entry_combo_meter:;                 entry_bool("Combo Meter", OS.TRUE, OS.FALSE, OS.TRUE, OS.TRUE, entry_1v1_combo_meter_swap)
+    entry_hold_to_exit_training:;       entry_bool("Hold To Exit Training", OS.TRUE, OS.TRUE, OS.TRUE, OS.FALSE, entry_improved_combo_meter)
+    entry_improved_combo_meter:;        entry_bool("Improved Combo Meter", OS.TRUE, OS.TRUE, OS.TRUE, OS.TRUE, entry_tech_chase_combo_meter)
+    entry_tech_chase_combo_meter:;      entry_bool("Tech Chase Combo Meter", OS.TRUE, OS.TRUE, OS.TRUE, OS.TRUE, entry_combo_meter)
+    entry_combo_meter:;                 entry_bool("Combo Meter", OS.TRUE, OS.TRUE, OS.TRUE, OS.TRUE, entry_1v1_combo_meter_swap)
     entry_1v1_combo_meter_swap:;        entry_bool("1v1 Combo Meter Swap", OS.FALSE, OS.FALSE, OS.FALSE, OS.FALSE, entry_neutral_spawns)
     entry_neutral_spawns:;              entry_bool("Neutral Spawns", OS.TRUE, OS.TRUE, OS.TRUE, OS.TRUE, entry_salty_runback)
     entry_salty_runback:;               entry("Salty Runback", Menu.type.INT, 1, 0, 1, 1, 0, 2, OS.NULL, string_table_salty, OS.NULL, entry_widescreen)
@@ -2463,10 +2463,10 @@ scope Toggles {
     // Random Music Toggles
     head_music_settings:
     entry_play_music:;                      entry_bool("Play Music", OS.TRUE, OS.TRUE, OS.TRUE, OS.TRUE, entry_random_music)
-    entry_random_music:;                    entry_bool("Random Music", OS.FALSE, OS.FALSE, OS.TRUE, OS.FALSE, entry_preserve_salty_song)
+    entry_random_music:;                    entry_bool("Random Music", OS.TRUE, OS.TRUE, OS.TRUE, OS.FALSE, entry_preserve_salty_song)
     entry_preserve_salty_song:;             entry_bool("Salty Runback Preserves Song", OS.FALSE, OS.FALSE, OS.FALSE, OS.FALSE, entry_menu_music)
-    entry_menu_music:;                      entry("Menu Music", Menu.type.INT, 0, 0, 1, 0, 0, menu_music.MAX_VALUE, play_menu_music_, string_table_menu_music, OS.NULL, entry_show_music_title)
-    entry_show_music_title:;                entry_bool("Music Title at Match Start", OS.TRUE, OS.FALSE, OS.TRUE, OS.TRUE, entry_bgm_volume)
+    entry_menu_music:;                      entry("Menu Music", Menu.type.INT, 21, 19, 21, 0, 0, menu_music.MAX_VALUE, play_menu_music_, string_table_menu_music, OS.NULL, entry_show_music_title)
+    entry_show_music_title:;                entry_bool("Music Title at Match Start", OS.TRUE, OS.TRUE, OS.TRUE, OS.TRUE, entry_bgm_volume)
     entry_bgm_volume:;                      entry("BGM Volume", Menu.type.INT, 10, 10, 10, 10, 0, 10, update_bgm_volume, string_table_volume, OS.NULL, entry_fgm_volume)
     entry_fgm_volume:;                      entry("SFX  Volume", Menu.type.INT, 10, 10, 10, 10, 0, 10, update_fgm_volume, string_table_volume, OS.NULL, entry_load_profile_music)
     evaluate LOAD_PROFILE_MUSIC_ENTRY_ORIGIN(origin())
@@ -3048,6 +3048,7 @@ scope Toggles {
     include "/music/profiles/slappers.asm"
     include "/music/profiles/freshjams.asm"
     include "/music/profiles/medleys.asm"
+    include "/music/profiles/yaron.asm"
     include "/music/profiles/staff.asm"
 
     // Include stage profiles here

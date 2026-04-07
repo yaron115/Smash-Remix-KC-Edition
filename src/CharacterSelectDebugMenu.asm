@@ -11,6 +11,8 @@ print "included CharacterSelectDebugMenu.asm\n"
 // - CPU Level stuff flashes sometimes when debug menu is on when CPU is selected
 // - Team button flashes sometimes when debug menu is on when Team Battle is toggled
 
+// TODO KC: disable most of this and lock in most settings when mode is set to tournament
+
 include "Global.asm"
 include "OS.asm"
 

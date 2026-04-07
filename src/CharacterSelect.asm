@@ -9,6 +9,8 @@ print "included CharacterSelect.asm\n"
 // TODO:
 // - Names for variants (improve quality)
 
+// TODO KC: use some combo of defeated pose, gray out portrait, invalid sound, or rearrange CSS to better reflect legal characters when in tournament mode
+
 include "Global.asm"
 include "OS.asm"
 
@@ -1155,6 +1157,7 @@ scope CharacterSelect {
         addiu   a0, r0, NUM_SLOTS           // original line 2 modified to include all slots
 
         // Check toggle to see if we should include bonus chars
+        // TODO KC: change DEFAULT to include all LEGAL characters instead
         li      s0, Toggles.entry_variant_random
         lw      s0, 0x0004(s0)              // s0 = random select (0 = DEFAULT, 1 = BONUS, 2 = ALL VARIANTS, 3 = VANILLA)
         bnezl   s0, pc() + 8                // if random select is not 'DEFAULT', then include

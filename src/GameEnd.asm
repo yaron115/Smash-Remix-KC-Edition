@@ -100,6 +100,7 @@ scope GameEnd {
         nop
 
         // if here, we are restarting; check the stage_id
+        // TODO KC: add Wario laugh for else scenario
         _salty_stage_check:
         li      a2, Global.match_info
         lw      a2, 0x0000(a2)              // a2 = match info
