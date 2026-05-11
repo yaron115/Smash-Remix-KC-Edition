@@ -1157,7 +1157,7 @@ scope CharacterSelect {
         addiu   a0, r0, NUM_SLOTS           // original line 2 modified to include all slots
 
         // Check toggle to see if we should include bonus chars
-        // TODO KC: change DEFAULT to include all LEGAL characters instead
+        // TODO KC: add tournament toggle that bans illegal characters and includes just 1 variant for legal, with the clear best option OR US
         li      s0, Toggles.entry_variant_random
         lw      s0, 0x0004(s0)              // s0 = random select (0 = DEFAULT, 1 = BONUS, 2 = ALL VARIANTS, 3 = VANILLA)
         bnezl   s0, pc() + 8                // if random select is not 'DEFAULT', then include

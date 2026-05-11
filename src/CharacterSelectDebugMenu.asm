@@ -11,7 +11,10 @@ print "included CharacterSelectDebugMenu.asm\n"
 // - CPU Level stuff flashes sometimes when debug menu is on when CPU is selected
 // - Team button flashes sometimes when debug menu is on when Team Battle is toggled
 
-// TODO KC: disable most of this and lock in most settings when mode is set to tournament
+// TODO KC: make new tourney option for toggle for CSS menu, that:
+//    - restricts option to visual things like tag, shield color
+//    - plus legal things like taunt rebind
+// Additionally, have all non-default options for this toggle clear (set to default) all options that are not relevant to the setting chosen
 
 include "Global.asm"
 include "OS.asm"

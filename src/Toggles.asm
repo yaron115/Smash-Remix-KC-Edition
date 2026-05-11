@@ -1285,6 +1285,7 @@ scope Toggles {
 
     // @ Description
     // Random variants strings
+    // TODO KC: new tournament option
     random_select_bonus:; db "INCLUDE BONUS", 0x00
     random_select_variants:; db "ALL VARIANTS", 0x00
     random_select_vanilla:; db "VANILLA ONLY", 0x00
@@ -2569,7 +2570,7 @@ scope Toggles {
     entry_random_stage_title:;                  Menu.entry_title("Random Stage Toggles:", toggle_all_, entry_random_stage_congo_jungle)
     evaluate first_stage_toggle(num_toggles)
     entry_random_stage_congo_jungle:;           entry_bool("Congo Jungle", OS.TRUE, OS.FALSE, OS.TRUE, OS.TRUE, entry_random_stage_dream_land)
-    entry_random_stage_dream_land:;             entry_bool("Dream Land", OS.TRUE, OS.TRUE, OS.TRUE, OS.TRUE, entry_random_stage_dream_land_beta_1)
+    entry_random_stage_dream_land:;             entry_bool("Dream Land", OS.TRUE, OS.FALSE, OS.TRUE, OS.TRUE, entry_random_stage_dream_land_beta_1)
     entry_random_stage_dream_land_beta_1:;      entry_bool("Dream Land Beta 1", OS.FALSE, OS.FALSE, OS.FALSE, OS.FALSE, entry_random_stage_dream_land_beta_2)
     entry_random_stage_dream_land_beta_2:;      entry_bool("Dream Land Beta 2", OS.FALSE, OS.FALSE, OS.FALSE, OS.FALSE, entry_random_stage_duel_zone)
     entry_random_stage_duel_zone:;              entry_bool("Duel Zone", OS.TRUE, OS.FALSE, OS.FALSE, OS.TRUE, entry_random_stage_final_destination)
