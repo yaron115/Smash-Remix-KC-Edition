@@ -1,6 +1,8 @@
 # Smash Remix KC Edition
 A mod of Smash Remix Debugged that makes it easier to run tourneys with the KC Remix Ruleset.
 
+![v2 KC Remix stage list](assets/images/kc_ruleset_stages_v2.png)
+
 # How to Play Online on RMG Kaillera Edition
 - Find the `mupen64plus.ini` file
   - For portable installation, it will be under the `Data` folder wherever you set up RMG-K
