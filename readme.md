@@ -1,88 +1,126 @@
-# Smash Remix Debugged
-*A Smash Remix Mod Made by Brob2nd*
+# Smash Remix KC Edition
+A mod of Smash Remix Debugged that makes it easier to run tourneys with the KC Remix Ruleset.
 
-Smash Remix Debugged is a mod for the Super Smash Bros. 64 mod, Smash Remix, this mod's purpose is to work as a template for future Smash Remix mods, adding things like new features (mentioned below) or inaccessible stuff now being accessible (like some inaccessible stages and songs now being accessible).
+# How to Play Online on RMG Kaillera Edition
+- Find the `mupen64plus.ini` file
+  - For portable installation, it will be under the `Data` folder wherever you set up RMG-K
+  - For regular installation, it will be somewhere like `C:\Users\<USERNAME>\AppData\Local\Programs\RMG-K\Data`, substituting the username and possibly the drive
+- Open the file with Notepad
+- At the bottom, paste the following RDB info:
 
-It also adds some extra content, such as playable Sandbag, the Tap Jump and Walljump gameplay options, Extended VS Match Stats, Z Cancel Guide, Stage Bans (like in Project M/+), 4 Tournament Stage Pages with a list of viable stages for Tournaments, and more.
-
-# How to Play Smash Remix Debugged Online on Project64KSE or RMG Kaillera Edition
-TODO KC: support for KC version here
-If you play on Project64KSE, then follow the steps on the netplay set-up tutorial on smash64.online, then on your Project64KSE folder, go to the cfg folder, then open the pj64.rdb file, then go to the bottom line, and copy/paste this:
-
-Smash Remix Debugged 1.3.2's Info:
 ```
-[08F70EE5-7AAAAF7E-C:45]
-Counter Factor=1
-Culling=1
-Good Name=SmashRemixDebugged1.3.2
-Internal Name=SmashRemix
-RDRAM Size=8
-SMM-Cache=0
-SMM-FUNC=0
-SMM-TLB=0
-Status=Compatible
-Use TLB=No
-ViRefresh=2200
-```
-Smash Remix Debugged 1.3.2 (PAL)'s Info:
-```
-[CBE9350F-35898EBA-C:50]
-Counter Factor=1
-Culling=1
-Good Name=SmashRemixDebugged1.3.2 (PAL60)
-Internal Name=SmashRemix
-RDRAM Size=8
-SMM-Cache=0
-SMM-FUNC=0
-SMM-TLB=0
-Status=Compatible
-Use TLB=No
-ViRefresh=2200
-```
-If you instead play on RMG Kaillera Edition, then follow the steps on the netplay set-up tutorial on smashremix.net, then on your RMG-K folder, go to the Data folder, then open the mupen64plus.ini file, then go to the bottom line, and copy/paste this:
-
-Smash Remix Debugged 1.3.2's Info:
-```
-[4F7A78991455017C84DD2A9610109475]
-GoodName=SmashRemixDebugged1.3.2
-CRC=08F70EE5 7AAAAF7E
-RefMD5=DFBFAF5B78BE87B2762218B91CC7C935-
-CountPerOp=1
-```
-Smash Remix Debugged 1.3.2 (PAL)'s Info:
-```
-[3FD1BC92175A623D4ACB6B218ABA8C79]
-GoodName=SmashRemixDebugged1.3.2 (PAL60)
-CRC=CBE9350F 35898EBA
-RefMD5=DFBFAF5B78BE87B2762218B91CC7C935-
+[11B4E57B7D7A7790A3BFB15942213702]
+GoodName=SmashRemix KC 0.1.1
+CRC=8F09381 B4C7C039
+RefMD5=5AAC6E652C5CF1E37A466AC0073E88CA
 CountPerOp=1
 ```
 
-# FAQ/Q&A
+# Applying the Patch via Website
+Assuming you already have the .xdelta
 
-Q1: Does Smash Remix Debugged use the latest Smash Remix patch?
+- Go to https://kotcrab.github.io/xdelta-wasm/
+- For "source file", choose your vanilla legally dumped ROM
+- For "patch file", choose the .xdelta file you downloaded
+- It will download a patched ROM for you
+- Recommended to rename that ROM to something that makes sense
 
-A1: Yes, it does!
+# KC Remix Ruleset
 
-Q2: Does the mod modify/change or delete anything from Vanilla Smash Remix?
+- Characters
+  - Top 4 (Pika/Kirby/Falcon/Yoshi) are banned
+  - All regular Remix characters are legal
+  - Bonus characters allowed: DSamus, Lucas, Peppy, Lanky, Dr. Luigi, Roy
+  - Regional variants of unbanned vanilla characters are legal
+  - Other d-pad characters ("boss characters" and polygons) are banned
+- Format
+  - 8 minutes
+  - 4 stock
+  - Tournament mode on
+  - No gameplay or graphics altering menu options/CSS debug options allowed
+  - Pausing the game is prohibited and may be considered a forfeiture at TO's discretion.  Hold to pause is ON.
+    - A player may pause to quit out of a game and change stage/character/color/etc if such a change was missed, assuming they are following the "Order" rules below, as long as neither character has lost a stock and both players are at 0%.  If that is not true, the match may be considered a forfeiture at TO's discretion.
+- Stages
+  - Starters
+    - Crateria DL
+    - Melrode
+    - Glacial River Remix
+    - Planet Clancer, movement ON
+    - Saffron DL, movement ON
+  - Counterpicks
+    - Dr. Mario
+    - Goomba Road
+    - Big Boo's Haunt, movement ON
+- Order
+  - Game 1
+    - Both players choose their character blindly
+    - Players RPS
+    - Winner bans 1 starter
+    - Loser bans 2 starters
+    - Winner chooses from remaining starters
+  - Remaining games
+    - Winner bans 2  (press C down to ban) from starters + counterpicks
+    - Loser picks a stage from remaining starters + counterpicks
+      - mDSR applies -- a player cannot counterpick to the last stage they won on during the set
+      - At any time during the set though, players may go to any _legal_ stage if both players agree to it
+    - The winner chooses their character
+    - The loser counterpicks their character
 
-A2: No! the mod has all content already available on Vanilla Smash Remix!
+# List of changes from Smash Remix Debugged upstream
+- Updated version message on title screen
+- Updated tourney stage list to only 1 page, and to reflect our ruleset
+- Updated random stages in tourney mode to reflect our ruleset
+- Added new random music profile "yaron's Mix"
+- Toggle updates (note: TE = tourney, CE = community, NE = netplay)
+  - "Hold to exit training" default to ON in CE/NE modes
+  - "Improved combo meter" default to ON in TE mode
+  - "Tech chase combo meter" default to ON in TE mode
+  - "Combo meter" default to ON in TE mode
+  - "Hold to pause" default to ON in CE mode
+  - "Menu music" default to "RANDOM ALL" in CE/NE modes, "Random Menu" in TE
+  - "Show music title on round start" default to ON in TE mode
+  - "Random music" default to ON in TE mode
 
-Q3: Does the mod add new characters, stages, items, songs, or game modes?
+# TODOs
+- 0.2.0
+  - Make Big Boo's Haunt a bit lighter
+  - Adjust BBH moving plat timings so the plats aren't out for as long
+  - Lighten up BBH stage icon
+  - Add new random character select toggle "Tournament".  Removes banned characters, adds legal bonus characters.  Possibly uses the "best" region variant for legal vanilla characters if there's a clear choice
+  - Add new toggle for CSS menu "Tournament" that removes only the banned options
+  - Change tourney profile to use these new toggles
+  - Update CSS menu toggle to reset all settings that are not available in the chosen option (example if you select "Tournament" and someone has taunt items enabled, it gets reset to off)
+- Other
+  - "Tourney mode" CSS toggle
+  - Second page of stages in tourney mode for doubles
+  - Update (neutral) spawns for any legal doubles stages
+  - Add third page to stage select in tourney mode with stages that are borderline/we want more data on
+  - Add labels to stage select pages in tourney mode
+  - More random music profiles
+  - Toggle to remove barrels in Smashketball 1
 
-A3: Technically, no, the only added character is Sandbag, and the only added stages are "Home-Run Contest", "Soccer" and "Time Twister (SSS)" (variants for "Duel Zone", "Smashketball" and "Time Twister") which were stages that were already in the game, just not normally accessible, but now they are, same for some songs, it also doesn't add any new items or game modes, however.
-
-Q4: Can i use this mod for my tournament?
-
-A4: Yes, you can! That's why there's a new 4th tourney stage page in the mod! It's optional though, meaning that if you want, you can still use vanilla Smash Remix for your tournaments!
-
-# Modder's FAQ/Q&A
-
-Q1/Q2: Does the mod run on the latest 'original.z64' file/I need to port all of my work imported to the previous original.z64 to the new one?
-
-A1/A2: Yes, it does! The mod itself is based/build of the latest original.z64 file (and also from the latest Smash Remix patch) meaning that if you ported, added or changed something to the original.z64, you won't have any worries of having to re-import it to the "new" one.
+# Changelog
+- 0.1.1
+  - Updated tourney stage list to reflect v2 of the KC ruleset
+  - Updated tourney random stages list to match v2 of KC ruleset
+  - Fixed an issue where vanilla Dream Land was still included in tourney random stages
+  - Updated random music profile "yaron's Mix"
+- 0.1.0
+  - Updated tourney stage list to only 1 page, and to reflect our ruleset
+  - Updated random stages in tourney mode to reflect our ruleset
+  - Added new random music profile "yaron's Mix"
+  - Toggle updates (note: TE = tourney, CE = community, NE = netplay)
+    - "Hold to exit training" default to ON in CE/NE modes
+    - "Improved combo meter" default to ON in TE mode
+    - "Tech chase combo meter" default to ON in TE mode
+    - "Combo meter" default to ON in TE mode
+    - "Hold to pause" default to ON in CE mode
+    - "Menu music" default to "RANDOM ALL" in CE/NE modes, "Random Menu" in TE
+    - "Show music title on round start" default to ON in TE mode
+    - "Random music" default to ON in TE mode
 
 # Credits
+## Smash Remix Debugged Credits
 
 Brob2nd: Leader of the project, programmer/coder.
 
@@ -104,7 +142,7 @@ MichaelthemanX: Sandbag's Announcer.
 
 Loogi, Krix08 and Arrowshoes: Sandbag's Crowd Chant.
 
-# Smash Remix
+## Smash Remix
 *A Super Smash Bros. 64 Mod Organized by The_Smashfather*
 
 ## Building
@@ -115,891 +153,3 @@ the compressed files within the rom. If you utilize a vanilla Smash 64 rom, it w
 You must utilize the xdelta patch to generate a good rom for Assembly.
 
 You must place your legally acquired patched ROM in the 'roms' folder for this to work. It must be named ssb.rom
-
-# Features
-(Note: Smash Remix requires the the 8 MB expansion pak to be enabled.)
-## Gameplay
-
-### Hitstun
-- Available Hitstun options are: 'Normal', 'Melee'
-
-#### Toggle Name: _Hitstun_
-
-### Hitlag
-- Available Hitstun options are: 'Normal', 'Japanese', 'Melee', 'Ultimate', 'None'
-
-#### Toggle Name: _Hitlag_
-
-### DI
-- Available DI options are: 'Normal', 'Japanese', 'Ultimate'
-- "Ultimate" is not accurate, it's just weaker DI. Goes well with Ultimate hitlag.
-
-#### Toggle Name: _DI_
-
-### AI Improvements
-Computer controlled players have received a variety of improvements.
-- They attempt to recover more than once.
-- They randomly tech (30% left, 30% right, 30% in place, 10% missed).
-- They Z-Cancel (95% success rate).
-- CPU Level 10 added.
-
-#### Toggle Name: _Improved AI_
-
-### Combo Meter Improvements
-- "Improved Combo Meter" prevents the combo meter from resetting when the character is grabbed or bounces off of a wall.
-- Additionally, the "Tech Chase Combo Meter" toggle will prevent the combo meter from resetting on an inescapable tech chase.
-
-#### Toggle Names: _Improved Combo Meter_, _Tech Chase Combo Meter_
-
-### Combo Meter Display
-- Displays a combo meter above players being comboed outside Training mode.
-- Combo meter color corresponds with attacking player's port or team.
-- In 1v1 matches, the "1v1 Combo Meter Swap" toggle will display the combo meter above the player performing the combo.
-
-#### Toggle Names: _Combo Meter_, _1v1 Combo Meter Swap_
-
-### Expanded Character Select Screen
-- The character select screen is now expanded to 30 slots including 18 custom characters.
-- Metal Mario, Giant DK, and polygon versions of the original cast are available via d-pad up or down.
-- Japanese versions of the original cast are available via d-pad left.
-- European versions of some of the original cast are available via d-pad right.
-- Giga Bowser, Mad Piano, Super Sonic and Metal Luigi are available via d-pad up.
-- Polygon versions of the remix cast are available via d-pad down.
-
-### Character Select Debug Menu
-A menu for modifying certain character attributes is available on each panel.
-
-##### Shield
-- Allows selecting a shield color.
-- The Costume option will use a shield color matching the selected costume.
-- The Vanilla option will use the vanilla shield color scheme for that port.
-##### Visibility
-- Allows playing as completely invisible (None), slightly visible (Cloaked), or as a silhouette (Dark).
-##### Player Tag
-- Allows player to select a stored tag.
-- Names are always visible when selected.
-##### Skeleton
-- Setting to enabled is perfect for Halloween.
-##### Model
-- Allows forcing high definition or low definition version of character.
-##### Input HUD
-- Allows showing the button and joystick inputs in an unobtrusive overlay.
-- Can be configured to show on top or bottom of screen.
-##### Size
-- Allows playing as the giant or tiny version of the character.
-##### Stock
-- "Last" mode maintains stock count from the previous game. Useful for crew battles.
-- "Manual" mode allows specifying the stock count.
-##### Knockback
-- Setting to random will create a moveset for the character with randomized knockback.
-- The knockback angle is generated for each move at the start of the match and will persist until the end of the match.
-- Resetting training mode or performing a salty runback will not generate a new set of knockback angles.
-##### Delay
-- Adds input delay to imitate netplay. HMN ports only.
-##### Handicap
-- Allows modifying CPU handicap. CPU ports only.
-##### Start With
-- Allows specifying an item for the character to start matches and respawn with.
-##### Taunt Itm.
-- Allows specifying an item that will spawn in the character's possession when the taunt button is pressed.
-##### Taunt Btn.
-- Allows remapping the taunt button to C or d-pad buttons.
-##### Kirby Hat
-- Allows setting Kirby's hat.
-##### Practice
-- Activates 1p Practice mode and allows stage selection (for 1p and Remix 1p).
-- Scores are disabled while this is active.
-- Can reset stage while mode is activated (press L while paused, during GameEnd, or at Score Screen).
-##### Dpad map
-- Available mappings are: 'Smash', 'Tilt' or 'Special'
-##### Dpad ctrl
-- Available control schemes are: 'Stick Swap', 'Stickless', 'Stick Swap J', or 'Stickless J'
-    - 'Stick Swap' switches Dpad and Stick inputs, and can be used in conjunction with 'Dpad Map'.
-    - 'J' options = Jump with Dpad Up
-    - You can hold B during Up Special for an alternate angle (works in all directions)
-      - Applies to: Fox, Falco, Wolf, Peppy, Mewtwo
-- Note: When using this, Shield is mapped to L and Taunt is mapped to Z.
-##### Initial Damage
-- Allows setting the damage percent to begin the match with.
-##### Poison Dmg
-- Applies constant percent damage every two seconds.
-- Available strengths are: 'Low' (1%), 'Med' (2%), 'High' (4%), 'Heal' (-1%)
-
-#### Toggle Name: _CSS Panel Menu_
-
-### Expanded Stage Select Screen
-- The stage select screen is now expanded to multiple pages.
-- All original stages are playable as well as dozens of new stages.
-
-### Stage Hazard Modes
-- Pressing L on the stage select screen will cycle through the selected stage's available hazards.
-- Hazards (bumpers, barrels, etc.) and Movement (of platforms) can turned off.
-- The Cursor's color indicates which hazard types are being turned off:
-    - Red = None, Lightblue = Hazards, Cyan = Movement, Blue = Both
-- Note: Stage hazards cannot be changed when using the TOURNAMENT stage select layout.
-
-#### Toggle Name: _Hazard Mode_
-
-### Whispy Mode
-- Available Whispy wind speeds are: 'Normal', 'Japanese', 'Super', or 'Hyper'
-
-#### Toggle Name: _Whispy Mode_
-
-### Saffron Pokemon Rate
-- Available Pokemon rates are: 'Normal', 'Super', 'Hyper', or 'Quick Attack'
-
-#### Toggle Name: _Saffron Pokemon Rate_
-
-### Pokemon Announcer
-- Available options are: 'Stadium', 'All Stages', or 'Off'
-
-#### Toggle Name: _Pokemon Announcer_
-
-### Dragon King HUD
-- Available options are: 'Dragon King', 'All Stages', or 'Off'
-
-#### Toggle Name: _Dragon King HUD_
-
-### Stage Select Layout
-- Choose between NORMAL and TOURNAMENT stage select layouts. In the TOURNAMENT layout, the stages available align with the Smash Remix Tour ruleset.
-- Note: Random stage selection respects layout.
-
-#### Toggle Name: _Stage Select Layout_
-
-### Hold to Pause
-- Prevents accidental pausing by requiring the start button to be held for half of a second before pausing.
-
-#### Toggle Name: _Hold To Pause_
-
-### Neutral Spawns
-- Players spawn across from one another regardless of port.
-
-#### Toggle Name: _Neutral Spawns_
-
-### Salty Runback
-- Holding Start along with A + B + Z + R will restart the match on the same stage.
-- Note: Can select alternate button combo (A + B + Z + R + D-Pad Right).
-
-#### Toggle Name: _Salty Runback_
-
-### Salty Runback Preserves Song
-- Salty Runbacks will restart with the same track.
-
-#### Toggle Name: _Salty Runback Preserves Song_
-
-### Timed Stock Matches
-- Stock matches have a timer. Enabled by default but can be toggled off by setting TIME to "infinity."
-
-### Match Stats
-- Results screen has the option to show stats about the match such as damage given to each player.
-- If the Vs Mode Combo Meter toggle is on, combo stats are also displayed.
-
-### 12-Character Battle Mode
-- New VS mode for easily tracking 12cbs.
-- Features 5 preset character sets (Default, Japanese, Polygon, Remix, Polygon Remix) and allows for a custom character set per player.
-- Best character for each player is tracked as the number of TKOs the opposing player experiences against your character.
-- Only ports 1 and 2 work with this mode.
-
-### Stamina Mode
-- New VS mode rule option which enables H.P. to be used instead of damage.
-- The player is out when H.P. reaches 0, and the match ends when only one player/team has H.P. remaining.
-
-### Additional Items
- - New items available in training mode and in VS mode.
- - VS Mode Item Switch expanded to allowing toggling new items.
-#### Cloaking Device
- - Renders the player invisible and impervious to damage for 10 seconds.
-#### Super Mushroom
- - Player grows into giant form with added passive armor while dealing higher damage.
- - Lasts 10 seconds.
-#### Poison Mushroom
- - Player shrinks into tiny form and deals less damage.
- - Lasts 10 seconds.
-#### Spiny Shell
- - Throwable. Similar to Red/Green Shells. While active, it will go towards the player who is in first place.
-#### Lightning
- - Shrinks the players opponents into tiny form.
- - Lasts 10 seconds.
-#### Deku Nut
- - Throwable. Stuns opponents who get hit.
-#### Franklin Badge
- - Player becomes immune to projectiles. Projectiles that hit the player will be reflected back.
- - Lasts 20 seconds.
-#### Pitfall
- - Throwable. Can be planted, similar to a proximity mine. When stepped on, buries a player in the ground.
-#### Golden Gun
- - A powerful, single-shot weapon. Similar to the RayGun. TOP SECRET.
-#### Dango
- - Ebisumaru's food of choice. Heals 10%.
-#### P-Wing
- - Player can jump continuously in midair.
- - Lasts 20 seconds.
-#### Mr. Saturn
- - Throwable. Does heavy shield damage.
-#### Stopwatch
- - Slows down opponents, Speeds up your character, or Backfires (changes Game Engine Speed).
- - Lasts 10 seconds.
-
-### Tripping
-- If enabled, characters will randomly trip when dashing or running.
-
-#### Toggle Name: Tripping
-
-### Rage
-- If enabled, moves will deal more knockback if the attacker is at high damage. Affects direct attacks and projectiles.
-- Rage starts at 35% and caps at 150%.
-- Starting at 100%, the player also starts emiting smoke. It gets more intense up to 150%.
-- Types:
-    - Ultimate: The maximum rage multiplier is 1.1x knockback. Does not affect fixed knockback moves.
-    - Smash 4: The maximum rage multiplier is 1.15x knockback. Also affects fixed knockback moves.
-    - Berserk: The maximum rage multiplier is 1.5x knockback. Also affects fixed knockback moves.
-    - Fatigue: Rage is inverted and can get to a minimum of 0.5x knockback. Also affects fixed knockback moves.
-
-#### Toggle Name: Rage
-
-### Footstool Jumping
-- If enabled, you can jump off characters heads!
-
-#### Toggle Name: Footstool Jumping
-
-### Air Dodging
-- If enabled, fighters can air dodge to evade attacks! Also has an Air-Dashing mode.
-
-#### Toggle Name: Air Dodging
-
-### Jab Locking
-- If enabled, you can jab-lock your opponents.
-
-#### Toggle Name: Jab Locking
-
-### Ledge Jump
-- If enabled, you can press one of the C-Buttons to jump up while hanging from a ledge.
-
-#### Toggle Name: Ledge Jump
-
-### Perfect Shielding
-- If enabled, you can perform perfect/power shielding against your opponents attacks.
-
-#### Toggle Name: Perfect Shielding
-
-### Parrying
-- If enabled, you can perform parries that work similarly to Smash Ultimate.
-- Parries are activated whenever you get hit by an attack while on your shield drop animation.
-
-#### Toggle Name: Parrying
-
-### Spot Dodging
-- If enabled, you can dodge opponents attacks while grounded with Z/R + Down.
-
-#### Toggle Name: Spot Dodging
-
-### Fast Fall Aerials
-- If enabled, you can input a fast fall while doing an aerial attack.
-
-#### Toggle Name: Fast Fall Aerials
-
-### Ledge Trumping
-- If enabled, you can grab a ledge even if another fighter is already holding onto it.
-
-#### Toggle Name: Ledge Trumping
-
-### Wall Teching
-- If enabled, fighters can tech off walls and ceilings too.
-
-#### Toggle Name: Wall Teching
-
-### Charged Smash Attacks
-- If enabled, fighters can charge smash attacks.
-
-#### Toggle Name: Charged Smash Attacks
-
-### Item Containers
-- Allows disabling item containers, having them never explode, or forcing explosions.
-- Affects Crates, Barrels, Capsules.
-
-#### Toggle Name: Item Containers
-
-### Game Speed
-- Allows changing the Game Engine Speed (similar to Training Speed).
-- Available Speed values range from '1/8' to '3.0x'
-
-#### Toggle Name: Game Speed
-
-### Special Zoom
-- Similarly to Super Smash Bros. Ultimate, causes a dramatic zoom along with a slow-motion effect to play out whenever an attack connects and is expected to KO an opponent. Note that this does not consider stage collision (walls, ceilings, for example) and is calculated before DI, which may lead to (intended) "fake" Special Zooms.
-- When enabled, a small selection of moves that are knowingly strong or hard to hit will cause a version of the Special Zoom effect even when no KO is expected. These moves include Jigglypuff's Rest, Captain Falcon's Falcon Punch, and so on. The list is mostly similar to Smash Ultimate's.
-- Options:
-    - MATCH END: KOs will only cause Special Zoom on a stock that will end the match.
-    - ANY KO: Any KO will trigger the Special Zoom.
-
-#### Toggle Name: Special Zoom
-
-### Blastzone Warp *BETA
-- If enabled, fighters will warp across Blastzones instead of KOing.
-
-#### Toggle Name: Blastzone Warp *BETA
-
-### Single Button Mode
-- Restricts players to use of a single button.
-- Available options are: 'A', 'B', or 'R' (with optional inclusion of 'C' for jumping).
-
-#### Toggle Name: Single Button Mode
-
-### All Items R Drop (Aerial)
-- Allows dropping items in midair with 'R'.
-
-#### Toggle Name: All Items R Drop (Aerial)
-
-### Move Staling
-- Allows disabling move staling, or using alternative algorithms.
-- Available Staling options are: 'Default', 'Disabled', 'Strict', 'Wait For It', 'Reverse', 'Cheap Shot'
-
-#### Toggle Name: Move Staling
-
-### Stopwatch Item
-- Allows for selecting which Stopwatch Item effect to use (instead of random outcome).
-- Available options are: 'Slow', 'Fast', 'Backfire', 'No Backfire'
-
-#### Toggle Name: Stopwatch Item
-
-## Customization
-### Costume Selection Improvements
-- Access all available costumes by scrolling with the left and right C buttons.
-- Access all available shades by scrolling with the up and down C buttons.
-- Metal Mario and the polygons also have alternate costumes.
-- To control CPU costumes, hover over the panel at the bottom of the screen and press the C buttons.
-
-### Random Music
-- Random music allows players to listen to music from other stages.
-
-#### Toggle Name: _Random Music_
-
-### Random Music Switch
-- Changes the possible music tracks to be used when random music is enabled.
-
-#### Toggle Name: Each track's title is listed in the Music Settings menu
-
-### Random Music Profiles
-Load a curated list of tracks.
-- Community: All tracks.
-- Vanilla: Only tracks from the original game.
-- Classics: Features themes and arrangements from games on the N64 and prior systems.
-- Into Battle: Mostly comprised of dramatic, intense, or exciting music.
-- Positive Vibes: Mostly comprised of upbeat, energetic, or happy music.
-- Slappers Only: The_Smashfather's personal favorite tracks.
-- Staff Picks: Favorites of the contributors of Smash Remix.
-
-### Menu Music
-- Choose between the classic SSB64 music or from Melee's and Brawl's menu themes, as well as various tracks from other games.
-- By default, the Melee and Brawl themes will play from time to time.
-- Can turn menu music off if desired.
-
-#### Toggle Name: _Menu Music_
-
-### Alternate Music
-- Custom stages have up to two alternate tracks that will play at random.
-- The "Occasional" alternate track plays more frequently than the "Rare" alternate track.
-- The music track can be forced by holding a C button when choosing the stage: C-up = Default, C-left = Occasional, C-right = Rare
-
-### Random Stage Switch
-- Changes possible outcomes of pressing RANDOM on the stage select screen.
-
-#### Toggle Name: Each stage's name is listed under Random Stage Toggles in the Stage Settings menu
-
-### Random Stage Profiles
-Load a curated list of stages.
-- Community: All stages except for Dream Land Beta 1 and 2 and How to Play.
-- Tournament: All stages generally agreed to be "legal" in tournaments.
-- Semi-Competitive: Stages that give some variation but are still considered somewhat competitive.
-- Competitive: Stages that may not be "tournament legal" but are still considered competitive.
-- Vanilla: All original stages except for Dream Land Beta 1 and 2 and How to Play.
-- Dream Land Only: All stages with Dream Land layout.
-- No Omega Variants: All stages except for Omega variants, Dream Land Beta 1 and 2 and How to Play.
-- No Variants: All stages except for variants, Dream Land Beta 1 and 2 and How to Play. (Fray's Stage Night is included.)
-- Staff Picks: Favorites of the contributors of Smash Remix.
-
-### Random Select With Variants
-- By default, the variants (Metal Mario, Giant DK, polygons, J/E regional versions) are not included in the random character select that occurs when toggling the CPU button on the character select screen.
-- This toggle allows for them to be included.
-
-#### Toggle Name: _Random Select With Variants_
-
-### Player Tags
-- Can store up to 20 names (which are be selected via Character Menu Panel).
-
-## Practice
-### Hold to Exit Training
-- Prevents accidentally exiting training mode by requiring the A button to be held for half of a second when on the Exit pause menu option.
-
-#### Toggle Name: _Hold To Pause_
-
-### Special Model Display
-Use the toggle or cycle using D-Pad down in Training Mode.
-- Hitbox: Displays hitboxes and hurtboxes instead of normal characters/items/projectiles.
-- Hitbox+: Displays transparent hitboxes and hurtboxes alongside normal characters/items/projectiles.
-- ECB: View character and item collision diamonds.
-
-#### Toggle Name: _Special Model Display_
-
-### Advanced Hurtbox Display
-When Special Model Display is Hitbox or Hitbox+, these changes are applied:
-- Transparent hitboxes
-- Cyan grab-immune hurtboxes
-- Gray hurtboxes during active armor
-#### Toggle Name: _Advanced Hurtbox Display_
-
-### Color Overlays
-- Fills in the character model with a solid color during certain player states.
-
-#### Toggle Name: _Color Overlays_
-
-### Flash On Z-Cancel
-- Displays a sparkle effect when a successful Z-cancel input is detected on landing.
-
-#### Toggle Name: _Flash On Z-Cancel_
-
-### Z-Cancel
-- Allows Disabling Z-Cancel, using Melee timing (7 frames), Automating, or 'Glide Mode' (landing does not cancel attack).
-
-### Punish Failed Z-Cancel
-- Punishes the player in various ways for missing Z-cancels.
-
-#### Toggle Name: _Punish Failed Z-Cancel_
-
-## Quality of Life
-## New Music Added
-- Dozens of new music tracks featuring some new instruments added.
-
-### Improved Pause Camera
-- Allows the camera to be zoomed, moved and rotated freely while the game is paused.
-- A and B to zoom, C buttons to move. Z+A or Z+B to adjust FOV.
-
-### Cycle Music Tracks
-- Players can change music tracks during a match with d-pad while the game is paused.
-    - D-Pad Right cycles through the stage's music tracks.
-    - D-Pad Down picks a random music track.
-    - Can view current track in Pause Legend.
-
-### Settings Menu Shorcut
-- Quickly access Settings from any CSS or SSS screen by holding 'L'.
-
-### Crash Debugger
-- When a game crash occurs, attempts to display a screen with detailed information on what went wrong.
-- Note: Press Z+L+R to cycle through debugger pages.
-
-### Cinematic Camera
-- Controls the cinematic camera zooms which occasionally occur at the start of a versus match.
-
-#### Toggle Name: _Cinematic Camera_
-
-### Idle Timeouts Disabled
-- Remaining idle on various menu screen for 5 minutes no longer results in returning to the START screen.
-
-### Quick Start
-- All stages and characters unlocked
-- Tournament approved match settings set by default. (4 stocks, 8:00 timer)
-
-### Shield Colors Match Player Ports and Teams
-- Shield colors will match the color of the port or team the character is on, unless the Shield CSS debug menu setting is set to Vanilla for the port.
-
-### Improved VS Results Screen Scoring for Timeouts
-- In timed matches, ties are broken by number of KOs.
-
-### Skip Results Screen
-- The results screen is not shown.
-- Can be overridden by holding L + R at the end of a match.
-
-#### Toggle Name: _Skip Results Screen_
-
-### Widescreen
-- Better widescreen support during matches.
-
-#### Toggle Name: _Widescreen_
-
-### Music Title at Match Start
-- See the title of the track and its game of origin at the start of matches.
-
-#### Toggle Name: _Music Title at Match Start_
-
-### Disable Anti-Aliasing
-- Turn off anti-aliasing.
-
-#### Toggle Name: _Disable Anti-Aliasing_
-
-### FPS Display *BETA
-- Display FPS in the top left of the screen.
-- For an overclocked N64, use the OVERCLOCKED option.
-
-#### Toggle Name: _FPS Display *BETA_
-
-### Stereo Fix for Hit SFX
-- Fixes a vanilla bug where some SFX is panned in the wrong direction.
-
-#### Toggle Name: _Stereo Fix for Hit SFX_
-
-### Always Show Full Results
-- When off, restores vanilla results screen behavior for stock matches.
-
-#### Toggle Name: _Always Show Full Results_
-
-### 'L' selects Random Character
-- Allows selecting a random character via L button if 'Press L' is selected.
-
-#### Toggle Name: _'L' selects Random Character_
-
-### Dpad CSS Cursor Control
-- Allows Dpad to control cursor (for controllers without a stick).
-
-#### Toggle Name: _Dpad CSS Cursor Control_
-
-### PK Thunder Reflect Crash Fix
-- Allows toggling _PK Thunder Reflect Crash fix_
-
-#### Toggle Name: _PK Thunder Reflect Crash Fix_
-
-### Camera Mode
-- Override the in-game Camera
-- Normal: No change.
-- Bonus: Force the camera to follow and track players.
-- Fixed: Force the camera to show the entire stage.
-- Scene: Camera remains frozen at the last pause position, HUD is disabled, cinematic entry is disabled.
-
-#### Toggle Name: _Camera Mode_
-
-## Accessibility features
-### Flash Guard
-- Reduces screen flashing effects when turned on.
-
-#### Toggle Name: _Flash Guard_
-
-### Screenshake
-- Allows reducing or disabling screen shake visual effect.
-- May help with motion sensitivity.
-
-#### Toggle Name: _Screenshake_
-
-## Training Mode
-### Custom Menu
-- Pressing Z while the menu is open will open the custom training menu. This menu allows you to access special settings for each port.
-    - Character: The character used.
-    - Costume: The costume used by the character.
-    - Type: The type of player. (Human, CPU, Disabled)
-    - Spawn: The position the character will spawn in when the reset button is pressed.
-    - Set Custom Spawn: Sets the position to be used when the "Custom" spawn option is selected.
-    - Percent: The percent to be applied to the character on reset, or when the "Set Percent" button is pressed.
-    - Set Percent: Changes the character's percent to the above value.
-    - Reset Sets Percent: Toggles whether or not the character's percent will be changed on reset.
-    - OOS Action: The action CPU will take out of shield in Shield Break Mode.
-    - CPU Teching: Set CPU teching. (Random, Roll Backward, Roll Forward, In Place, None)
-    - CPU DI Type: Set CPU DI Type. (None, Random, Smash, Slide)
-    - CPU DI Strength: Set CPU DI Strength. (High, Medium, Low, Random)
-    - CPU DI Direction: Set CPU DI Direction. (Left, Right, Up, Down, Toward, Away, Random)
-    - D-Pad Controls: Toggles the Training D-pad functions. (On, Reset Only, Disabled)
-
-### D-Pad Shortcuts
-- Pressing up on the d-pad will pause/unpause the game.
-- Pressing right on the d-pad will advance to the next frame.
-- Pressing down on the d-pad will cycle through special model display modes.
-- Pressing left on the d-pad will reset.
-
-### Reset Counter
-- The reset count for the current training session will be recorded and displayed at the top of the screen while the menu is open.
-
-### Shield Break Mode
-- Practice shield pressure by turning on Shield Break Mode in the custom menu.
-
-### Music
-- Pick which track you want to listen to while in Training Mode via the custom menu.
-
-### Show Action and Frame
-- Pressing L toggles display of each character's current action and frame of animation.
-
-### Skip Training Start Cheer
-- Disables the cheer sound at the start of Training Mode.
-
-#### Toggle Name: Skip Training Start Cheer
-
-## Japanese Gameplay
-
-Many `Gameplay Settings` contain options that enable Japanese behavior: Hitstun, Hitlag, DI, Shield Stun, etc.
-
-### Japanese Sounds
-- By default, J characters use Japanese sound effects.
-- This toggle enables further controlling the J sound effects to be used for all characters or no characters.
-
-#### Toggle Name: _Japanese Sounds_
-
-### Momentum Slide
-- This toggle enables a momentum glitch that exists in the Japanese version.
-
-#### Toggle Name: _Momentum Slide_
-
-### Japanese Shield Stun
-- Use the Japanese version's shield stun value.
-
-#### Toggle Name: _Japanese Shield Stun_
-
-## Single Player Modes
-
-### Bonus 3 (Race to the Finish)
-- Record best times for completing the RTTF stage using all characters just like for Bonus 1 and Bonus 2.
-
-### Remix BTT/BTP
-- Use any character on any BTT/BTP stage and track best times.
-
-### Remix 1p Mode
-- A new take on the standard 1p Mode
-    - Fight randomly selected Remix characters at one of their three randomly selected stages
-    - Increased difficulty with Very Easy mode being the equivalent of standard 1p Mode's Normal Difficulty
-    - Challenge Fox and Falco in a doubles battle
-    - Characters have Alternate Bonus Stages for Bonuses 1 & 2
-    - Fight a Kirby Team with brand new powers
-    - Face new boss characters
-
-### All-Star Mode
-- Fight all characters in the roster.
-- Heal at the rest area between battles by using one of the three hearts.
-
-### Multiman Mode
-- Fight a neverending polygon team and track KOs as highscores.
-
-### Cruel Multiman
-- Same as Multiman Mode but much more difficult.
-
-### Home-Run Contest
-- Deal as much damage to the Sandbag to knock it as far as you can before time runs out.
-
-### 1p Enemy Control Mode
-- Activated by another player pressing 'Z' at 1p, Remix 1p, or Allstar CSS.
-- Scores are disabled while this is active.
-- Master Hand controls can be found [here](https://www.ssbwiki.com/Master_Hand_(SSB)#Moveset).
-
-### Gallery
-- View 1P "Congratulations" images and listen to music tracks.
-    - Press Start to enter Idle mode (all 1P images and music cycle on a timer)
-    - Press Start a second time to enter Idle 2 mode (your Random music and matching 1P images cycle on a timer)
-    - Press A to play music, or skip to the next track in Idle modes
-    - Press B to exit
-
-## Profiles
-- Toggles can be controlled quickly by choosing one of four built-in profiles: Community, Tournament, Netplay and Japanese
-
-### Defaults
-#### Remix Settings
-Toggle                     | Community          | Tournament        | Netplay           | Japanese
----------------------------|--------------------|-------------------|-------------------|-------------------
-Skip Results Screen        | Off                | Off               | On                | Off
-Hold To Pause              | Off                | On                | On                | Off
-CSS Panel Menu             | On                 | Off               | On                | On
-Color Overlays             | Off                | Off               | Off               | Off
-Cinematic Camera           | Default            | Default           | Default           | Default
-Flash On Z-Cancel          | Off                | Off               | Off               | Off
-FPS Display *BETA          | Off                | Off               | Off               | Off
-Model Display              | Default            | Default           | High Poly         | Default
-Special Model Display      | Off                | Off               | Off               | Off
-Advanced Hurtbox Display   | Off                | Off               | Off               | Off
-Hold To Exit Training      | Off                | On                | Off               | Off
-Improved Combo Meter       | On                 | Off               | On                | On
-Tech Chase Combo Meter     | On                 | Off               | On                | On
-Combo Meter                | On                 | Off               | On                | On
-1v1 Combo Meter Swap       | Off                | Off               | Off               | Off
-Neutral Spawns             | On                 | On                | On                | On
-Salty Runback              | On                 | Off               | On                | On
-Widescreen                 | Off                | Off               | Off               | Off
-Japanese Sounds            | Default            | Default           | Default           | Always
-Stereo Fix for Hit SFX     | On                 | On                | On                | On
-Random Select With Variants| Off                | Off               | Off               | Off
-Disable HUD                | Off                | Off               | Off               | Off
-Disable Anti-Aliasing      | Off                | Off               | Off               | Off
-Always Show Full Results   | On                 | On                | On                | On
-Skip Training Start Cheer  | Off                | Off               | Off               | Off
-Default CPU LVL (V.S.)     | 3                  | 3                 | 3                 | 3
-Jigglypuff Sing GFX Anims  | On                 | Off               | On                | On
-L Selects Random Character | Off                | Off               | Off               | OFf
-PK Thunder Reflect Crash Fix  | On              | On                | On                | On
-Flash Guard                | Off                | Off               | Off               | OFf
-Screenshake                | Default            | Default           | Default           | Default
-
-#### Gameplay Settings
-Toggle                     | Community          | Tournament        | Netplay           | Japanese
----------------------------|--------------------|-------------------|-------------------|-------------------
-Hitstun                    | Normal             | Normal            | Normal            | Normal
-Hitlag                     | Normal             | Normal            | Normal            | Japanese
-DI                         | Normal             | Normal            | Normal            | Japanese
-Japanese Sounds            | Default            | Default           | Default           | Always
-Momentum Slide             | Off                | Off               | Off               | On
-Shield Stun                | Normal             | Normal            | Normal            | Japanese
-Z-Cancel                   | Default            | Default           | Default           | Default
-Punish Failed Z-Cancel     | Off                | Off               | Off               | Off
-Improved AI                | On                 | Off               | On                | On
-Tripping                   | Off                | Off               | Off               | Off
-Rage                       | Off                | Off               | Off               | Off
-Footstool Jumping          | Off                | Off               | Off               | Off
-Air Dodging                | Off                | Off               | Off               | Off
-Jab Locking                | Off                | Off               | Off               | Off
-Edge C-Jumping             | Off                | Off               | Off               | Off
-Perfect Shielding          | Off                | Off               | Off               | Off
-Parrying                   | Off                | Off               | Off               | Off
-Spot Dodging               | Off                | Off               | Off               | Off
-Fast Fall Aerials          | Off                | Off               | Off               | Off
-Ledge Trumping             | Off                | Off               | Off               | Off
-Wall Teching               | Off                | Off               | Off               | Off
-Charged Smash Attacks      | Off                | Off               | Off               | Off
-Item Containers            | Default            | Default           | Default           | Default
-Game Speed                 | 1/1                | 1/1               | 1/1               | 1/1
-Blastzone Warp *BETA       | Off                | Off               | Off               | Off
-Single Button Mode         | Off                | Off               | Off               | Off
-All Items R Drop (Aerial)  | Off                | Off               | Off               | Off
-Move Staling               | Default            | Default           | Default           | Default
-Stopwatch Item             | Default            | Default           | Default           | Default
-
-#### Music Settings
-Toggle                          | Community          | Tournament        | Netplay           | Japanese
---------------------------------|--------------------|-------------------|-------------------|-------------------
-Play Music                      | On                 | On                | On                | On
-Random Music                    | Off                | Off               | On                | Off
-Salty Runback Preserves Song    | Off                | Off               | Off               | Off
-Menu Music                      | DEFAULT            | DEFAULT           | 64                | DEFAULT
-Music Title at Match Start      | On                 | Off               | On                | On
-_Random Toggles for All Tracks_ | On                 | On                | On                | On
-
-#### Stage Settings
-Toggle                          | Community          | Tournament        | Netplay           | Japanese
---------------------------------|--------------------|-------------------|-------------------|-------------------
-Stage Select Layout             | NORMAL             | TOURNAMENT        | NORMAL            | NORMAL
-Hazard Mode                     | NORMAL             | NORMAL            | NORMAL            | NORMAL
-Whispy Mode                     | NORMAL             | NORMAL            | NORMAL            | JAPANESE
-Saffron Pokemon Rate            | NORMAL             | NORMAL            | NORMAL            | NORMAL
-Pokemon Announcer               | DEFAULT            | OFF               | DEFAULT           | OFF
-Dragon King HUD                 | DEFAULT            | OFF               | DEFAULT           | DEFAULT
-Yoshi's Island Cloud Anims      | Off                | Off               | Off               | Off
-Camera Mode                     | NORMAL             | NORMAL            | NORMAL            | NORMAL
-_Random Toggles for All Stages_ | [Community]        | [Tournament]      | [Semi-Competitive]| [Community]
-
-These stages are set to On in the Tournament profile:
-- Dream Land
-- Fray's Stage
-- Fray's Stage - Night
-- First Destination
-- Pokemon Stadium
-- Pokemon Stadium 2
-- Deku Tree
-- Kalos Pokemon League
-- Smashville
-- Goomba Road
-- Gym Leader Castle
-- Saffron City DL
-- Ganon's Tower
-- Glacial River Remix
-- Dr. Mario
-- Tal Tal Heights (Hazards Off)
-- Glacial River
-- Melrode
-- Yoshi's Story
-- Battlefield
-- Gerudo Valley
-- WarioWare, Inc.
-- Delfino Plaza
-- Castle Siege
-- Spiral Mountain
-- Smashville Remix
-- Yoshi's Island DL
-- Yoshi's Island II
-- Planet Clancer
-- Fountain of Dreams
-- Final Destination
-- Glacial River
-- Big Boo's Haunt
-- Green Hill Zone
-- New Pork City
-- Bowser's Keep
-- dataDyne Central (Movement Off)
-- Peach's Castle DL (Hazards Off)
-- Congo Jungle DL (Hazards Off)
-- Hyrule Castle DL (Hazards Off)
-- Zebes DL (Hazards Off)
-- Mushroom Kingdom DL (Hazards Off)
-- Duel Zone DL
-- Yoshi's Island DL (Hazards Off)
-- Dream Land (Hazards Off)
-- Sector Z DL (Hazards Off)
-- Saffron City DL (Hazards Off)
-- Final Destination DL
-- Meta Crysal DL
-- Mute City DL
-- Winter Dream Land
-- Deku Tree DL
-- Crateria DL
-- Battlefield DL
-
-These stages are set to On in the Semi-Competitive profile:
-- Congo Jungle
-- Dream Land
-- Hyrule Castle
-- Meta Crystal
-- Peach's Castle
-- Saffron City
-- Mini Yoshi's Island
-- First Destination
-- Ganon's Tower
-- Gym Leader Castle
-- Pokemon Stadium
-- Tal Tal Heights
-- Glacial River
-- WarioWare, Inc.
-- Battlefield
-- Dr. Mario
-- Dragon King
-- Fray's Stage
-- Tower of Heaven
-- Fountain of Dreams
-- Muda Kingdom
-- Mementos
-- Sprial Mountain
-- Mute City DL
-- Mad Monster Mansion
-- Bowser's Stadium
-- Delfino Plaza
-- Corneria
-- Kitchen Island
-- Smashville
-- New Pork City
-- Norfair
-- Corneria City
-- Congo Falls
-- Yoshi's Story
-- Gerudo Valley
-- Fray's Stage Night
-- Goomba Road
-- Saffron City DL
-- Yoshi's Island DL
-- Bowser's Keep
-- Windy
-- dataDyne Central
-- Planet Clancer
-- Castle Siege
-- Yoshi's Island II
-- Cool Cool Mountain SR
-- Cool Cool Mountain DL
-- Mute City
-- Mushroom Kingdom SR
-- Green Hill Zone
-- Subcon
-- Pirate Land
-- Casino Night Zone
-- Metallic Madness
-- Pokemon Stadium 2
-- Norfair Remix
-- Tal Tal Heights Remix
-- Winter Dream Land
-- Glacial River Remix
-- Crateria DL
-- Twilight City
-- Melrode
-- Grim Reaper's Cavern
-- Scuttle Town
-- Big Boo's Haunt
-- Dinosaur Land
-- Spawned Fear
-- Smashville Remix
-- Big Snowman
